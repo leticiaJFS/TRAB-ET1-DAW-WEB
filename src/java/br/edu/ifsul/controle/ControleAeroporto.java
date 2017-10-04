@@ -5,8 +5,10 @@
  */
 package br.edu.ifsul.controle;
 
-import br.edu.ifsul.dao.PessoaDAO;
-import br.edu.ifsul.modelo.Pessoa;
+import br.edu.ifsul.dao.AeroportoDAO;
+import br.edu.ifsul.dao.CidadeDAO;
+import br.edu.ifsul.modelo.Aeroporto;
+import br.edu.ifsul.modelo.Cidade;
 import br.edu.ifsul.util.Util;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
@@ -16,22 +18,32 @@ import javax.faces.bean.SessionScoped;
  *
  * @author Leticia-PC
  */
-@ManagedBean(name = "controlePessoa")
+@ManagedBean(name = "controleAeroporto")
 @SessionScoped
-public class ControlePessoa implements Serializable{
-    private PessoaDAO dao;
-    private Pessoa objeto;
+public class ControleAeroporto implements Serializable{
+    private AeroportoDAO dao;
+    private Aeroporto objeto;    
+    private CidadeDAO daoCidade;
 
-    public ControlePessoa() {
-        dao = new PessoaDAO();
+    public ControleAeroporto() {
+        dao = new AeroportoDAO();        
+        daoCidade = new CidadeDAO();
+    }
+
+    public CidadeDAO getDaoCidade() {
+        return daoCidade;
+    }
+
+    public void setDaoCidade(CidadeDAO daoCidade) {
+        this.daoCidade = daoCidade;
     }
     
     public String listar(){
-        return "/privado/pessoa/listar?faces-redirect=true";
+        return "/privado/aeroporto/listar?faces-redirect=true";
     }
     
     public String novo(){
-        objeto = new Pessoa();
+        objeto = new Aeroporto();
         return "formulario?faces-redirect=true";
     }
     
@@ -64,19 +76,19 @@ public class ControlePessoa implements Serializable{
         }
     }
 
-    public PessoaDAO getDao() {
+    public AeroportoDAO getDao() {
         return dao;
     }
 
-    public void setDao(PessoaDAO dao) {
+    public void setDao(AeroportoDAO dao) {
         this.dao = dao;
     }
 
-    public Pessoa getObjeto() {
+    public Aeroporto getObjeto() {
         return objeto;
     }
 
-    public void setObjeto(Pessoa objeto) {
+    public void setObjeto(Aeroporto objeto) {
         this.objeto = objeto;
     }
     

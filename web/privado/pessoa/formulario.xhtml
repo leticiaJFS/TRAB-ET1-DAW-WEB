@@ -18,24 +18,24 @@
                 </f:facet>
                 <f:facet name="footer">
                     <div align="center">
-                        <p:commandButton value="Cancelar" action="#{controlePessoas.cancelar()}" ajax="false" immediate="true"/>
-                        <p:commandButton value="Salvar" icon="ui-icon-disk" action="#{controlePessoas.salvar()}" ajax="false"/>
+                        <p:commandButton value="Cancelar" action="#{controlePessoa.cancelar()}" ajax="false" immediate="true"/>
+                        <p:commandButton value="Salvar" icon="ui-icon-disk" action="#{controlePessoa.salvar()}" ajax="false"/>
                     </div>
                 </f:facet>
-                <p:outputLabel value="ID" rendered="#{controlePessoas.objeto.id !=null}" />
-                <p:inputText value="#{controlePessoas.objeto.id}" size="5" readonly="true" rendered="#{controlePessoas.objeto.id !=null}"/>
+                <p:outputLabel value="ID" rendered="#{controlePessoa.objeto.id !=null}" />
+                <p:inputText value="#{controlePessoa.objeto.id}" size="5" readonly="true" rendered="#{controlePessoa.objeto.id !=null}"/>
                 
                 <p:outputLabel value="Nome" for="txtNome"/>
-                <p:inputText id="txtNome" value="#{controlePessoas.objeto.nome}" size="40" maxlength="40" placeholder="Obrigatório"/>
+                <p:inputText id="txtNome" value="#{controlePessoa.objeto.nome}" size="40" maxlength="40" placeholder="Obrigatório"/>
                 
                 <p:outputLabel value="CPF" for="txtCPF"/>
-                <p:inputText id="txtCPF" value="#{controlePessoas.objeto.cpf}" size="40" maxlength="40" placeholder="Obrigatório"/>
+                <p:inputText id="txtCPF" value="#{controlePessoa.objeto.cpf}" size="40" maxlength="40" placeholder="Obrigatório"/>
                 
                 <p:outputLabel value="E-mail" for="txtEmail"/>
-                <p:inputText id="txtEmail" value="#{controlePessoas.objeto.email}" size="40" maxlength="40" placeholder="Obrigatório"/>
+                <p:inputText id="txtEmail" value="#{controlePessoa.objeto.email}" size="40" maxlength="40" placeholder="Obrigatório"/>
                 
                 <p:outputLabel value="Telefone" for="txtTelefone"/>
-                <p:inputText id="txtTelefone" value="#{controlePessoas.objeto.telefone}" size="40" maxlength="40" placeholder="Obrigatório"/>
+                <p:inputText id="txtTelefone" value="#{controlePessoa.objeto.telefone}" size="40" maxlength="40" placeholder="Obrigatório"/>
                 
                 
             </p:panelGrid>

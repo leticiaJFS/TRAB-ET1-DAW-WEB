@@ -4,26 +4,26 @@ import br.edu.ifsul.util.Util;
 import java.util.List;
 import javax.persistence.EntityManager;
 import br.edu.ifsul.jpa.EntityManagerUtil;
-import br.edu.ifsul.modelo.Pessoa;
+import br.edu.ifsul.modelo.Aeroporto;
 
 /**
  *
  * @author Leticia-PC
  */
-public class PessoaDAO {
+public class AeroportoDAO {
     private String mensagem = "";
     private EntityManager em;
 
-    public PessoaDAO() {
+    public AeroportoDAO() {
         this.em = EntityManagerUtil.getEntityManager();
                 
     }
 
-    public List<Pessoa> getLista(){
-        return em.createQuery("from Pessoa order by nome").getResultList();
+    public List<Aeroporto> getLista(){
+        return em.createQuery("from Aeroporto order by nome").getResultList();
     }
     
-    public boolean salvar(Pessoa obj){
+    public boolean salvar(Aeroporto obj){
         try{
             em.getTransaction().begin();
             if(obj.getId() == null){
@@ -44,7 +44,7 @@ public class PessoaDAO {
         }
     }
     
-    public boolean remover(Pessoa obj){
+    public boolean remover(Aeroporto obj){
         try{
             em.getTransaction().begin();
             em.remove(obj);
@@ -61,8 +61,8 @@ public class PessoaDAO {
         }
     }    
     
-    public Pessoa localizar(Integer id){
-        return em.find(Pessoa.class, id);
+    public Aeroporto localizar(Integer id){
+        return em.find(Aeroporto.class, id);
     }
     
     public String getMensagem() {

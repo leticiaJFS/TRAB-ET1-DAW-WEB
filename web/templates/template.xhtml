@@ -13,19 +13,16 @@
         </h:head>
         <p:layout fullPage="true">
             
-            <p:layoutUnit position="north" header="Sistema da turma 5N1 - JSF, Primefaces e JPA" style="text-align: center">
+            <p:layoutUnit position="north" header="Sistema de Gestão para Aeroporto - JSF, Primefaces e JPA" style="text-align: center">
                 <h:form id="formMenu">
                     <p:megaMenu>
                         <p:submenu label="Cadastros">
                             <p:column>
-                                <p:submenu label="Básicos">
+                                <p:submenu label="Gerais">
                                     <p:menuitem action="#{controlePessoa.listar()}" ajax="false" value="Manutenção de Pessoas"/>                                    
                                     <p:menuitem action="#{controleAeroporto.listar()}" ajax="false" value="Manutenção de Aeroportos"/>  
                                     <p:menuitem action="#{controleCidade.listar()}" ajax="false" value="Manutenção de Cidades"/>                                
-                                    <p:menuitem action="#{controleClasse.listar()}" ajax="false" value="Manutenção de Classes"/>                                
-                                    <p:menuitem action="#{controlePassagem.listar()}" ajax="false" value="Manutenção de Passagens"/>                              
-                                    <p:menuitem action="#{controleVoo.listar()}" ajax="false" value="Manutenção de Voos"/>                              
-                                    <p:menuitem action="#{controleVooAgendado.listar()}" ajax="false" value="Manutenção de Voos Agendados"/> 
+                                    <p:menuitem action="#{controleClasse.listar()}" ajax="false" value="Manutenção de Classes"/>
                                 </p:submenu>
                             </p:column>
                         </p:submenu>

@@ -5,8 +5,8 @@
  */
 package br.edu.ifsul.controle;
 
-import br.edu.ifsul.dao.PessoaDAO;
-import br.edu.ifsul.modelo.Pessoa;
+import br.edu.ifsul.dao.CidadeDAO;
+import br.edu.ifsul.modelo.Cidade;
 import br.edu.ifsul.util.Util;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
@@ -16,22 +16,22 @@ import javax.faces.bean.SessionScoped;
  *
  * @author Leticia-PC
  */
-@ManagedBean(name = "controlePessoa")
+@ManagedBean(name = "controleCidade")
 @SessionScoped
-public class ControlePessoa implements Serializable{
-    private PessoaDAO dao;
-    private Pessoa objeto;
+public class ControleCidade implements Serializable{
+    private CidadeDAO dao;
+    private Cidade objeto;
 
-    public ControlePessoa() {
-        dao = new PessoaDAO();
+    public ControleCidade() {
+        dao = new CidadeDAO();
     }
     
     public String listar(){
-        return "/privado/pessoa/listar?faces-redirect=true";
+        return "/privado/cidade/listar?faces-redirect=true";
     }
     
     public String novo(){
-        objeto = new Pessoa();
+        objeto = new Cidade();
         return "formulario?faces-redirect=true";
     }
     
@@ -64,19 +64,19 @@ public class ControlePessoa implements Serializable{
         }
     }
 
-    public PessoaDAO getDao() {
+    public CidadeDAO getDao() {
         return dao;
     }
 
-    public void setDao(PessoaDAO dao) {
+    public void setDao(CidadeDAO dao) {
         this.dao = dao;
     }
 
-    public Pessoa getObjeto() {
+    public Cidade getObjeto() {
         return objeto;
     }
 
-    public void setObjeto(Pessoa objeto) {
+    public void setObjeto(Cidade objeto) {
         this.objeto = objeto;
     }
     

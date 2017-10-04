@@ -4,6 +4,16 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    <!--Abaixo usado para colocar um tema diferente do que o padrão-->
+    <context-param>
+	<param-name>primefaces.THEME</param-name>
+	<param-value>cupertino</param-value>
+    </context-param>
+    <!--Abaixo usado para conseguir cmentar o código sem que o primefaces queira interpretá-los-->
+    <context-param>
+        <param-name>facelets.SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>

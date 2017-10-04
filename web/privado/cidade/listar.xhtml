@@ -6,32 +6,26 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     
     <ui:composition template="/templates/template.xhtml">
-        <ui:define name="titulo">Listagem de Pessoas</ui:define>
+        <ui:define name="titulo">Listagem de Cidades</ui:define>
         <ui:define name="conteudo"> 
         <h:form>
             <p:messages>
                 <p:growl>
-                    <p:commandButton value="Novo" action="#{controlePessoa.novo()}" ajax="false" icon="ui-icon-plus"/>
-                    <p:dataTable value="#{controlePessoa.dao.lista}" var="obj">
+                    <p:commandButton value="Novo" action="#{controleCidade.novo()}" ajax="false" icon="ui-icon-plus"/>
+                    <p:dataTable value="#{controleCidade.dao.lista}" var="obj">
                         <p:column headerText="ID">
                             <p:outputLabel value="#{obj.id}"/>
                         </p:column>
                         <p:column headerText="Nome">
                             <p:outputLabel value="#{obj.nome}"/>
                         </p:column>
-                        <p:column headerText="CPF">
-                            <p:outputLabel value="#{obj.cpf}"/>
-                        </p:column>
-                        <p:column headerText="E-mail">
-                            <p:outputLabel value="#{obj.email}"/>
-                        </p:column>
-                        <p:column headerText="Telefone">
-                            <p:outputLabel value="#{obj.telefone}"/>
-                        </p:column>
+                        <p:column headerText="País">
+                            <p:outputLabel value="#{obj.pais}"/>
+                        </p:column>                        
                         <p:column headerText="Ações">
                             <div align="center">
-                                <p:commandButton action="#{controlePessoa.editar(obj.id)}" icon="ui-icon-pencil" ajax="false" title="Alterar"/>
-                                <p:commandButton action="#{controlePessoa.remover(obj.id)}" icon="ui-icon-trash" ajax="false" title="Remover"
+                                <p:commandButton action="#{controleCidade.editar(obj.id)}" icon="ui-icon-pencil" ajax="false" title="Alterar"/>
+                                <p:commandButton action="#{controleCidade.remover(obj.id)}" icon="ui-icon-trash" ajax="false" title="Remover"
                                                  process="@form" update="@form" onclick="if(!confirm('Confirma a exclusão?')) return false"/>
                             </div>
                         </p:column>
