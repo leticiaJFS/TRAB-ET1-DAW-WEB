@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subVoo" pageWidth="540" pageHeight="842" columnWidth="540" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1dda239d-e157-44a0-84cc-30660020383f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="passagens" class="java.util.List">
+		<fieldDescription><![CDATA[passagens]]></fieldDescription>
+	</field>
+	<field name="data" class="java.util.Calendar">
+		<fieldDescription><![CDATA[data]]></fieldDescription>
+	</field>
+	<field name="totalPassageiros" class="java.lang.Integer">
+		<fieldDescription><![CDATA[totalPassageiros]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="aeronave" class="java.lang.String">
+		<fieldDescription><![CDATA[aeronave]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="540" height="32" uuid="a53b9d5f-247d-42f2-8848-6b2d522decb5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="778bde87-9901-4004-be2c-73ecaee61ced"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="100" height="30" uuid="acaff67c-1050-425c-98a1-38b68cd8e177"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="190" height="30" uuid="881ca6d4-c6b9-4d4e-9d9d-68286e37baa1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Aeronave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="1" width="200" height="30" uuid="d3e740e1-4e4a-4e97-aea2-102f283c3b9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total de Passageiros]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="540" height="31" uuid="50f90bf0-5017-43e1-848c-c49668787a21"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="30" uuid="259748d9-fbfd-42e2-b545-ad018ac4a370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="50" y="0" width="100" height="30" uuid="d23e2320-93e4-42b3-a262-aa9ca25bb3a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data}.getTime()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="190" height="30" uuid="cfa4f252-58fd-4191-8870-d28a438c8df7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aeronave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="-2" width="200" height="30" uuid="73954893-0537-48ea-8082-951d8acab853"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalPassageiros}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

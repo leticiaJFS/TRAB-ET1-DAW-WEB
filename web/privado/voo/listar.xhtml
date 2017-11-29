@@ -17,13 +17,13 @@
                                          icon="ui-icon-plus"
                                          process="@this" update=":formEdicao"
                                          oncomplete="PF('dlg').show();"/>
-
+                                           
+                        <p:commandButton value="Imprimir" action="#{controleVoo.imprimir()}" ajax="false" onclick="this.form.target='_blank';"/>
                         <p:panelGrid columns="11">
                             <p:outputLabel value="Ordem: "/>
                             <p:selectOneMenu value="#{controleVoo.dao.ordem}">
                                 <f:selectItem itemLabel="ID" itemValue="id"/>
                                 <f:selectItem itemLabel="Descrição" itemValue="descricao"/>
-                                <f:selectItem itemLabel="Tempo Estimado" itemValue="tempoEstimado"/> 
                                 <f:selectItem itemLabel="Periodicidade" itemValue="periodicidade"/>  
                                 <p:ajax update="listar"/>
                             </p:selectOneMenu>

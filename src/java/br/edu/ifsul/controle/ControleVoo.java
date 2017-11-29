@@ -7,7 +7,9 @@ import br.edu.ifsul.modelo.Aeroporto;
 import br.edu.ifsul.modelo.Voo;
 import br.edu.ifsul.modelo.VooAgendado;
 import br.edu.ifsul.util.Util;
+import br.edu.ifsul.util.UtilRelatorios;
 import java.io.Serializable;
+import java.util.HashMap;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
@@ -42,6 +44,11 @@ public class ControleVoo implements Serializable{
             }
             
         }
+    }
+    
+    public void imprimir(){
+        HashMap parametros = new HashMap();
+        UtilRelatorios.imprimeRelatorio("Voos", parametros, dao.getListaObjetos());
     }
     
     public void removerEscala(int index){

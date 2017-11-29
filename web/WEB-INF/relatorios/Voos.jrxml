@@ -24,7 +24,12 @@
 		<fieldDescription><![CDATA[id]]></fieldDescription>
 	</field>
 	<background>
-		<band splitType="Stretch"/>
+		<band height="133" splitType="Stretch">
+			<textField>
+				<reportElement x="-120" y="103" width="455" height="30" uuid="cdd160cf-9b01-4af8-bff0-50164dd0aa35"/>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+		</band>
 	</background>
 	<title>
 		<band height="73" splitType="Stretch">
@@ -40,66 +45,51 @@
 			</staticText>
 		</band>
 	</title>
-	<columnHeader>
-		<band height="30" splitType="Stretch">
-			<rectangle>
-				<reportElement x="0" y="0" width="555" height="30" uuid="ad4ae91e-66bb-4372-b10a-f73220452c9e"/>
-			</rectangle>
-			<staticText>
-				<reportElement x="0" y="0" width="80" height="30" uuid="1465e36b-4ac9-4fc2-94b2-3a2abe66a866"/>
-				<text><![CDATA[id]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="80" y="0" width="100" height="30" uuid="c7db086b-8c79-4555-953e-c9cc9981e9ba"/>
-				<text><![CDATA[descricao]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="180" y="0" width="60" height="30" uuid="efa89c0b-5807-4ce4-9c69-fb1129fc78fc"/>
-				<text><![CDATA[ativo]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="240" y="0" width="80" height="30" uuid="a92f492b-3d30-43cc-aa29-a88992d81a02"/>
-				<text><![CDATA[tempoEstimado]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="320" y="0" width="100" height="30" uuid="ac24f2d5-cec0-4238-b041-8192c9df262a"/>
-				<text><![CDATA[periodicidade]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="420" y="0" width="135" height="30" uuid="e5108609-21cc-46fe-a0de-29408c67015b"/>
-				<text><![CDATA[voos_agendados]]></text>
-			</staticText>
-		</band>
-	</columnHeader>
 	<detail>
-		<band height="30" splitType="Stretch">
-			<rectangle>
-				<reportElement x="0" y="0" width="555" height="30" uuid="5b6f1978-a418-45d4-ac19-e5844bafcdf1"/>
-			</rectangle>
+		<band height="168" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="7" width="100" height="30" uuid="f5ac8515-1304-4274-a21f-a94b393ea7d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Descrição do Voo:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="0" width="80" height="30" uuid="e458c3a5-3506-44a3-b2c5-85f391113991"/>
-				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="80" y="0" width="100" height="30" uuid="32fe1efd-c321-4e99-b9a4-8ae38169385d"/>
-				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="180" y="0" width="60" height="30" uuid="614666a7-4e4c-4a82-9006-f311d2fa4971"/>
-				<textFieldExpression><![CDATA[$F{ativo}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="240" y="0" width="80" height="30" uuid="6189eb4c-a389-4aaf-b841-8a889bfc8fe9"/>
+				<reportElement x="90" y="37" width="110" height="30" uuid="7fc9b6c6-2371-4385-983c-56534113462d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{tempoEstimado}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="37" width="90" height="30" uuid="ace8efa6-1790-45c9-a9c1-3b436183efb6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tempo Estimado:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="320" y="0" width="100" height="30" uuid="13035aff-29ce-43dd-b400-0fa89a383488"/>
+				<reportElement x="270" y="37" width="130" height="30" uuid="2043ff3d-b60a-45fe-8d54-a812bcae4b95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{periodicidade}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="200" y="37" width="70" height="30" uuid="1ec62d3c-0fa2-4a56-9204-bf6e28817818"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Periodicidade:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="420" y="0" width="135" height="30" uuid="5af327b3-5f53-4898-9089-43a3a9c10f84"/>
-				<textFieldExpression><![CDATA[$F{voos_agendados}]]></textFieldExpression>
+				<reportElement x="430" y="37" width="125" height="30" uuid="62596e6f-4f2e-4cdc-8c5a-d355a1cf65f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ativo}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="400" y="37" width="30" height="30" uuid="ef4654be-74d9-4d2f-91ea-dfc91501baf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ativo:]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="10" y="90" width="530" height="60" uuid="c0e424ef-c77d-4546-b5a5-18be74104a4e"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(
+	(java.util.List<br.edu.ifsul.modelo.VooAgendado>)
+	$F{voos_agendados}
+)]]></dataSourceExpression>
+				<subreportExpression><![CDATA["subVoo.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 	<pageFooter>
